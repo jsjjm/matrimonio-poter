@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+    <title>Cristopher y Marianella Matrimonio </title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            
+            overflow-x: hidden;
+        }
+
+        #audioButton {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #ffffff8e;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 2;
+            transition: background-color 0.3s ease; /* Transición de color durante 0.3 segundos */
+        }
+
+        #audioButton i {
+            font-size: 1.5em;
+        }
+
+        #audioButton:hover {
+            background-color: #ffd700; /* Cambio de color al pasar el ratón */
+        }
+
+
+
+
+
+        .seccion1 {
+            position: relative;
+            width: 100vw; /* Abarcar toda la anchura de la pantalla */
+            height: 100vh; /* Abarcar toda la altura de la pantalla */
+            /*overflow: hidden; /* Para evitar scroll en la sección 1 */
+            /*background-color: rgb(255, 255, 255);*/
+            background-image: url('./recursos//poter-imagen-2.jpeg'); /* Ajusta la ruta según la ubicación de tu imagen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden; /* Puedes mantener o quitar esta línea según tus necesidades */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .seccion1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: "Sacramento", Arial, serif;
+            /*font-size: 3em;*/
+            font-size: 100px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px #000000; /* Definiendo un borde dorado */
+        }
+
+        .noscasamos{
+            font-family: "Work Sans", Arial, sans-serif;
+            color: #ffffff;
+            font-size: 20px;
+            text-shadow: 2px 2px 4px #000000; /* Definiendo un borde dorado */
+        }
+
+        .seccion2 {
+            align-items: center;
+            text-align: center;
+            /*height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #f8f9fa; /* Color de fondo para la sección 2 */
+        }
+
+       /* .contador-dias{
+            background-color: #77dd7786;           
+            border-radius: 25px;
+            
+            border: 2px solid #ffd700;
+        }*/
+       /* .contador{
+            font-size: 1.5em;
+            color: #f8f9fa !important;
+        }
+        .contador strong{
+            font-size: 2.0em;
+        }*/
+
+        .informacion h4 {
+            font-family: 'Brush Script MT', cursive, sans-serif;
+            font-size: 2.5em;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px #000000; /* Definiendo un borde dorado */
+            }
+
+            .informacion label {
+                font-family: 'Arial', sans-serif;  /* Cambiado a Arial */
+            font-size: 1.5em;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px #000000; /* Definiendo un borde dorado */
+            }
+            .informacion > .col-4:not(:last-child) {
+                border-right: 2px solid #ffffff; /* Ajusta el color del borde según tus preferencias */
+            }
+
+        /* Media query para pantallas pequeñas (menos de 768px) */
+        @media (max-width: 767px) {
+            body {
+            margin: 0;
+            padding: 0;
+            font-family: "Work Sans", Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+            h1 {
+                /*font-size: 2.5em;*/
+                font-size: 30px;
+            }
+
+            .noscasamos{
+                font-size: 20px;
+            }
+
+           /* .contador-dias {
+                padding: 10px;
+            }*/
+
+            /*.contador {
+                font-size: 1.0em;
+            }*/
+
+           /* .contador strong {
+                font-size: 1.5em;
+            }*/
+
+            .informacion h4 {
+            
+            font-size: 2.0em;
+            
+            }
+
+            .informacion label {
+               
+            font-size: 1.0em;
+            font-family: "Work Sans", Arial, sans-serif;
+           
+            }
+            .informacion > .col-4:not(:last-child) {
+                border-right: 1px solid #000; /* Ajusta el color del borde según tus preferencias */
+            }
+
+        }
+
+            
+
+    </style>
+
+<style>
+    .contador {
+        display: flex;
+        justify-content: center; /* Centra los elementos horizontalmente */
+    }
+
+    @keyframes crecerReducir {
+0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+}
+
+.circulo {
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: #ea899bb0 ;
+border-radius: 50%;
+padding: 10px;
+width: 90px; /* Ajusta el ancho según tus necesidades */
+height: 90px; /* Ajusta la altura según tus necesidades */
+margin: 0 5px; /* Ajusta el margen horizontal según tus necesidades */
+animation: crecerReducir 2s infinite; /* 2s es la duración, puedes ajustarla según tus preferencias */
+}
+
+.circulo strong {
+font-size: 2.0em;
+color: #f8f9fa;
+}
+
+.circulo span {
+font-size: 0.8em;
+color: #f8f9fa;
+}
+
+@media (max-width: 767px) {
+.circulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ea899bb0;
+    border-radius: 50%;
+    padding: 6px;
+    width: 75px; /* Ajusta el ancho según tus necesidades */
+    height: 75px; /* Ajusta la altura según tus necesidades */
+    margin: 0 3px; /* Ajusta el margen horizontal según tus necesidades */
+    animation: crecerReducir 2s infinite; /* También se aplica en dispositivos móviles */
+}
+
+.circulo strong {
+    font-size: 1.5em;
+    color: #f8f9fa;
+}
+
+.circulo span {
+    font-size: 0.8em;
+    color: #f8f9fa;
+}
+}
+
+
+
+
+</style>
+
+</head>
+
+<body>
+
+    <div class="modal fade" id="audioModal" tabindex="-1" aria-labelledby="audioModalLabel" aria-hidden="true"
+data-bs-backdrop="static" data-bs-keyboard="false">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="audioModalLabel">¡Bienvenidos a Nuestra Celebración!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>¡Queridos amigos y familiares!</p>
+            <p>Estamos emocionados de tenerlos aquí para celebrar el amor de Cristopher y Marianella. Gracias por ser parte de este día especial lleno de amor, risas y momentos inolvidables.</p>
+            <p>¡Que disfruten de la celebración y creemos recuerdos duraderos juntos!</p>
+        </div>
+    </div>
+</div>
+</div>
+
+    
+    
+
+
+
+    <section class="seccion1">
+      <!--  <video autoplay muted loop>
+            <source src="./recursos" type="video/mp4">
+            Your browser does not support the video tag.
+        </video> -->
+        
+        <div>
+            <div class="row">
+                <h1>Cristopher & Marianella</h1>
+                <label class="noscasamos">Nos casamos pronto</label>
+            </div>
+            
+            <div class="p-2">
+              <!--- <div class="contador-dias container p-3">
+                    <div class="contador" id="contador"></div>
+                </div> -->
+
+                <div class="contador" id="contador">
+                    <div class="circulo">
+                        <strong id="dias"></strong>
+                        <span>Días</span>
+                    </div>
+                    <div class="circulo">
+                        <strong id="horas"></strong>
+                        <span>Horas</span>
+                    </div>
+                    <div class="circulo">
+                        <strong id="minutos"></strong>
+                        <span>Minutos</span>
+                    </div>
+                    <div class="circulo">
+                        <strong id="segundos"></strong>
+                        <span>Segundos</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row pt-3 informacion">
+                <div class="col-4">
+                        <h4>Día:</h4>
+                        <label for="">20 de <br> Enero</label>
+                </div>
+                <div class="col-4">
+                    <h4>Lugar:</h4>
+                    <label for="">Pasaje los zafiros<br>Mz b lt 20 urb. La Rinconada</label>
+                </div>
+                <div class="col-4">
+                    <h4>Hora:</h4>
+                    <label for="">09:30<br> AM</label>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <style>
+        .bi-balloon-heart {
+    font-size: 5em; /* Puedes ajustar el valor según tus preferencias */
+}
+.bendicion{
+    font-size: 40px;
+    font-family: "Sacramento", Arial, serif;
+}
+.privi{
+    font-family: "Work Sans", Arial, sans-serif;
+}
+    </style>
+    <section class="container seccion2 p-3">
+        <div class="row ">
+            <i class="bi bi-balloon-heart"></i>
+        </div>
+        <div class="row">
+            <label class="bendicion">Con la bendición de Dios y de nuestros padres</label>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-6 col-sm-6"> <!-- Cambiado a col-6 en lugar de col-4 -->
+                <div class="card p-3">
+                    Juan Kenni Peralta Vilchez<br>Jessica Maribel Arica Santos
+                </div>
+            </div>
+            <div class="col-6 col-sm-6"> <!-- Cambiado a col-6 en lugar de col-4 -->
+                <div class="card p-3">
+                    Teófilo Willy Luján Aguilar <br>Juana Consuelo Rodríguez Esquivel
+                </div>
+            </div>
+        </div>
+
+        <div class="row p-5 text-center">
+            <div class="row">
+                <label class="privi">Tenemos el privilegio de invitarte a:</label>
+            </div>
+            <div class="row">
+                <div class="">
+                    <img src="./recursos/nuestra-boda.png" alt="" class="card-img-top mx-auto" style="max-width: 400px;">
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+    </section>
+
+    <style>
+        .seccion3{
+            align-items: center;
+            text-align: center;
+            background-color: beige;
+        }
+        .ubi{
+    font-size: 40px;
+    font-family: "Sacramento", Arial, serif;
+}
+.direccion{
+    font-size: 1.0em;
+            font-family: "Work Sans", Arial, sans-serif;
+}
+.boton-mapa{
+    background-color: #ea899bb0;
+    color: #ffffff;
+}
+.boton-mapa:hover{
+    background-color: #ea899b;
+    color: #ffffff;
+}
+    </style>
+    <section class="seccion3 p-3">
+        <div class="row p-5">
+            <div class="row ">
+                <label class="ubi">Ubicación</label>
+                <label class="direccion">Pasaje los zafiros - Mz b lt 20 urb. La Rinconada (Departamento de la libertad "Trujillo")</label>
+            </div>
+            <div class="row text-center pt-3">
+                <a class="btn  mx-auto col-sm-6 col-md-3 rounded-pill boton-mapa" href="https://www.google.com/maps/place/8%C2%B005'40.4%22S+79%C2%B000'12.7%22W/@-8.0945558,-79.0061033,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-8.0945558!4d-79.0035284?hl=es-PE&entry=ttu">
+                    Ver Mapa
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        .seccion4{
+            align-items: center;
+            text-align: center;
+           /* background-color: rgb(127, 179, 125);*/
+        }
+        .codigo{
+            font-size: 60px;
+            font-family: "Sacramento", Arial, serif;
+            color: #efb810;
+            /*text-shadow: 2px 2px 4px #000000; /* Definiendo un borde dorado */
+        }
+        .vestimenta{
+            font-size: 30px;
+            font-family: "Work Sans", Arial, sans-serif;
+        }
+        .icono{
+            width: 200px;
+        }
+        @media (max-width: 767px) {
+            .codigo{
+            font-size: 40px;
+
+        }
+        .vestimenta{
+            font-size: 15px;
+
+        }
+        .icono{
+            width: 70px;
+        }
+
+        }
+    </style>
+    <section class="seccion4">
+        <div class="row p-5">
+            <div class="row">
+                <label class="codigo">Codigo de Vestimenta</label>
+            </div>
+            <div class="row">
+                <p class="vestimenta">
+                    Formal <br>
+                    Vestimenta de ocación elegante <br>
+                    Hombres: Terno <br>
+                    Mujeres: Vestido <br>
+                    <strong>NO BLANCO O DERIVADOS</strong>
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <img class="icono" src="./recursos/terno.png" alt="" >
+                </div>
+                <div class="col-6">
+                    <img class="icono" src="./recursos/vestido.png" alt="" >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .seccion5{
+            align-items: center;
+            text-align: center;
+           /* background-color: rgb(127, 179, 125);*/
+           background-image: url('./recursos/panel-madera-rustica.jpg'); /* Ajusta la ruta según la ubicación de tu imagen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden; /* Puedes mantener o quitar esta línea según tus necesidades */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .regalo{
+            font-family: "Sacramento", Arial, serif;
+            font-size: 30px;
+            text-shadow: 2px 2px 4px #aa9f02; /* Definiendo un borde dorado */
+        }
+        .cuenta{
+            font-size: 25px;
+            font-family: "Work Sans", Arial, sans-serif;
+        }
+        @media (max-width: 767px) {
+            .cuenta{
+            font-size: 18px;
+           
+        }
+        }
+    </style>
+    <section class="seccion5">
+        <div class="row p-5">
+            <div class="row">
+                <label class="regalo">Nuestro mejor regalo es que estés con nosotros en nuestro día, pero si deseas un detalle
+                    este es nuestro Número de cuenta:</label>                    
+            </div>
+            <div class="row">
+                <p class="cuenta">
+                    Cuenta BCP Soles es: <br>
+
+                    57071552663070 <br>
+
+                    00257017155266307004 (CCI) <br>
+
+                    Cuenta Interbank es: <br>
+
+                    8983265919091 <br>
+
+                    00389801326591909143 (CCI) <br>
+
+                    Yape / Plin <br>
+
+                    951110110 / 960658460
+
+                </p>
+            </div>
+            
+        </div>
+    </section>
+
+<style>
+    .seccion6{
+            align-items: center;
+            text-align: center;
+            }
+            .confirma{
+                font-family: "Sacramento", Arial, serif;
+            font-size: 30px;
+            /*text-shadow: 2px 2px 4px #aa9f02; /* Definiendo un borde dorado */
+            }
+            .estamos{
+                font-size: 25px;
+            font-family: "Work Sans", Arial, sans-serif;
+            }
+</style>
+    <section class="seccion6">
+
+        <div class="row p-5">
+            <div class="row">
+                <label class="confirma">Confirma Tu Asistencia</label>
+            </div>
+            <div class="row">
+                <div class="card p-3">
+                    <label for="estamos">Estamos entusiasmados por tener la oportunidad de disfrutar este día en tu compañía. Te agradecemos anticipadamente que nos confirmes tu presencia para poder organizar todo adecuadamente.</label>
+                </div>
+            </div>
+
+            <div class="container pt-3">
+                <div class="row ">
+                    <div class="col-md-6 text-center">
+                        <div class="row pt-2">
+                            <div class="col-12">
+                                <img class="icono" src="./recursos/novio.png" alt="">
+                            </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="col-12">
+                                <a href="https://wa.me/51960658460?text=Quiero%20confirmar%20mi%20asistencia%20al%20matrimonio" target="_blank" class="btn  rounded-pill boton-mapa">
+                                    Confirmar Asistencia
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="col-md-6 text-center">
+                        <div class="row pt-2">
+                            <div class="col-12">
+                                <img class="icono" src="./recursos/novia.png" alt="">
+                            </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="col-12">
+                                <a href="https://wa.me/51951110110?text=Quiero%20confirmar%20mi%20asistencia%20al%20matrimonio" target="_blank" class="btn  rounded-pill boton-mapa">
+                                    Confirmar Asistencia
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+
+        
+    </section>
+
+    <style>
+        .contactenme {
+            background-color: #ea899bb0;
+            color: #ffffff;
+            padding: 5px;
+        }
+    
+        .yo {
+            color: #ffffff;
+            text-decoration: none; /* Elimina el subrayado del enlace */
+        }
+    </style>
+    
+    <footer>
+        <div class="row text-center ">
+            <div class="row contactenme">
+                <a href="https://wa.me/51961948146?text=Hola%20Jose%20Jimenez%20me%20gustó%20la%20tarjeta%20de%20matrimonio,%20quisiera%20una%20similar%20❤️" target="_blank" class="yo">
+                    <i class="bi bi-arrow-right"></i> ¡Si te gustó esta web, contáctame! <i class="bi bi-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+
+
+
+
+    <div id="audioButton" onclick="toggleAudio()">
+        <i id="audioIcon" class="bi bi-volume-up-fill"></i>
+    </div>
+
+    <audio id="audio" loop>
+        <source src="./recursos/justin-cortado.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <script>
+        var audio = document.getElementById('audio');
+        var audioIcon = document.getElementById('audioIcon');
+        var audioModal = new bootstrap.Modal(document.getElementById('audioModal'));
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+                audioIcon.classList.remove('bi-volume-up-fill');
+                audioIcon.classList.add('bi-volume-mute-fill');
+            } else {
+                audio.pause();
+                audioIcon.classList.remove('bi-volume-mute-fill');
+                audioIcon.classList.add('bi-volume-up-fill');
+            }
+        }
+
+        // Mostrar el modal al cargar la página
+        window.onload = function () {
+            audioModal.show();
+        };
+
+        // Ocultar el modal y activar el audio al cerrar el modal
+        audioModal._element.addEventListener('hidden.bs.modal', function () {
+            toggleAudio();
+        });
+
+        // Cerrar el modal al hacer clic fuera del mismo
+        document.addEventListener('click', function (event) {
+            if (event.target === document.getElementById('audioModal')) {
+                audioModal.hide();
+            }
+        });
+    </script>
+
+<script>
+    // Obtén la fecha del matrimonio (20 de enero de 2024)
+    var fechaMatrimonio = new Date('2024-01-20T00:00:00');
+
+    // Función para actualizar el contador
+    function actualizarContador() {
+        // Obtén la fecha y hora actuales
+        var fechaActual = new Date();
+
+        // Calcula la diferencia en milisegundos
+        var diferencia = fechaMatrimonio - fechaActual;
+
+        // Calcula los días, horas, minutos y segundos
+        var dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+        var horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+        var segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+        // Actualiza el contenido de los elementos HTML con el contador
+        document.getElementById('dias').textContent = dias;
+        document.getElementById('horas').textContent = horas;
+        document.getElementById('minutos').textContent = minutos;
+        document.getElementById('segundos').textContent = segundos;
+    }
+
+    // Llama a la función para actualizar el contador cada segundo
+    setInterval(actualizarContador, 1000);
+</script>
+
+</body>
+
+</html>
+
+
